@@ -73,6 +73,19 @@ export default function HomeScreen({ navigation }) {
               </View>
             </TouchableOpacity>
 
+            <TouchableOpacity
+              style={globalStyles.featureCard}
+              onPress={() => navigation.navigate("ExamSchedule")}
+            >
+              <Text style={globalStyles.featureIcon}>📅</Text>
+              <View style={globalStyles.featureContent}>
+                <Text style={globalStyles.featureTitle}>Rokovi</Text>
+                <Text style={globalStyles.featureDescription}>
+                  Unos i praćenje ispitnih rokova za kolegije
+                </Text>
+              </View>
+            </TouchableOpacity>
+
             <TouchableOpacity style={globalStyles.featureCard}>
               <Text style={globalStyles.featureIcon}>📄</Text>
               <View style={globalStyles.featureContent}>

@@ -7,6 +7,7 @@ import HomeScreen from "./src/screens/HomeScreen";
 import CoursesMenuScreen from "./src/screens/CoursesMenuScreen";
 import CoursesListScreen from "./src/screens/CoursesListScreen";
 import ProfessorsScreen from "./src/screens/ProfessorsScreen";
+import ExamScheduleScreen from "./src/screens/ExamScheduleScreen";
 
 const Stack = createStackNavigator();
 
@@ -44,6 +45,11 @@ export default function App() {
           name="Professors"
           component={ProfessorsScreen}
           options={{ title: "Profesori" }}
+        />
+        <Stack.Screen
+          name="ExamSchedule"
+          component={ExamScheduleScreen}
+          options={{ title: "Ispitni rokovi" }}
         />
       </Stack.Navigator>
     </NavigationContainer>
