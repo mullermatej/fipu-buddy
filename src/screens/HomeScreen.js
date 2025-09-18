@@ -23,6 +23,12 @@ export default function HomeScreen({ navigation }) {
     );
   };
 
+  const openDABAR = () => {
+    Linking.openURL("https://dabar.srce.hr/").catch((err) =>
+      console.error("Failed to open URL:", err)
+    );
+  };
+
   return (
     <SafeAreaProvider>
       <SafeAreaView style={globalStyles.container}>
@@ -86,7 +92,10 @@ export default function HomeScreen({ navigation }) {
               </View>
             </TouchableOpacity>
 
-            <TouchableOpacity style={globalStyles.featureCard}>
+            <TouchableOpacity
+              style={globalStyles.featureCard}
+              onPress={() => navigation.navigate("TemplateDocuments")}
+            >
               <Text style={globalStyles.featureIcon}>📄</Text>
               <View style={globalStyles.featureContent}>
                 <Text style={globalStyles.featureTitle}>
@@ -130,6 +139,19 @@ export default function HomeScreen({ navigation }) {
                 <Text style={globalStyles.featureTitle}>Studomat</Text>
                 <Text style={globalStyles.featureDescription}>
                   Uvid u ocjene, ispite, rezultate i akademski progress
+                </Text>
+              </View>
+            </TouchableOpacity>
+
+            <TouchableOpacity
+              style={globalStyles.featureCard}
+              onPress={openDABAR}
+            >
+              <Text style={globalStyles.featureIcon}>📖</Text>
+              <View style={globalStyles.featureContent}>
+                <Text style={globalStyles.featureTitle}>DABAR Repozitorij</Text>
+                <Text style={globalStyles.featureDescription}>
+                  Baza studentskih radova i akademskih publikacija
                 </Text>
               </View>
             </TouchableOpacity>

@@ -8,6 +8,7 @@ import CoursesMenuScreen from "./src/screens/CoursesMenuScreen";
 import CoursesListScreen from "./src/screens/CoursesListScreen";
 import ProfessorsScreen from "./src/screens/ProfessorsScreen";
 import ExamScheduleScreen from "./src/screens/ExamScheduleScreen";
+import TemplateDocumentsScreen from "./src/screens/TemplateDocumentsScreen";
 
 const Stack = createStackNavigator();
 
@@ -50,6 +51,11 @@ export default function App() {
           name="ExamSchedule"
           component={ExamScheduleScreen}
           options={{ title: "Ispitni rokovi" }}
+        />
+        <Stack.Screen
+          name="TemplateDocuments"
+          component={TemplateDocumentsScreen}
+          options={{ title: "Template dokumenti" }}
         />
       </Stack.Navigator>
     </NavigationContainer>
