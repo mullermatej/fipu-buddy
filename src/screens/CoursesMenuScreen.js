@@ -76,17 +76,17 @@ export default function CoursesMenuScreen({ navigation }) {
               style={globalStyles.featureCard}
               onPress={() =>
                 navigation.navigate("CoursesList", {
-                  year: "1. godina diplomskog",
+                  year: "4. godina diplomskog",
                 })
               }
             >
               <Text style={globalStyles.featureIcon}>🎓</Text>
               <View style={globalStyles.featureContent}>
                 <Text style={globalStyles.featureTitle}>
-                  1. godina diplomskog
+                  4. godina (1. diplomska)
                 </Text>
                 <Text style={globalStyles.featureDescription}>
-                  Kolegiji prve godine diplomskog studija
+                  Kolegiji četvrte godine / prve godine diplomskog studija
                 </Text>
               </View>
             </TouchableOpacity>
@@ -95,17 +95,17 @@ export default function CoursesMenuScreen({ navigation }) {
               style={globalStyles.featureCard}
               onPress={() =>
                 navigation.navigate("CoursesList", {
-                  year: "2. godina diplomskog",
+                  year: "5. godina diplomskog",
                 })
               }
             >
               <Text style={globalStyles.featureIcon}>🏆</Text>
               <View style={globalStyles.featureContent}>
                 <Text style={globalStyles.featureTitle}>
-                  2. godina diplomskog
+                  5. godina (2. diplomska)
                 </Text>
                 <Text style={globalStyles.featureDescription}>
-                  Kolegiji druge godine diplomskog studija
+                  Kolegiji pete godine / druge godine diplomskog studija
                 </Text>
               </View>
             </TouchableOpacity>

@@ -413,3 +413,228 @@ export const electiveCourses = {
     },
   ],
 };
+
+// Kolegiji diplomskog studija
+
+export const graduateCourses = {
+  "4. godina diplomskog": {
+    "7. semestar": [
+      {
+        id: 1,
+        name: "IT Management",
+        ects: 6.0,
+        professors: ["izv. prof. dr. sc. Darko Etinger"],
+        load: "30P - 30V",
+      },
+      {
+        id: 2,
+        name: "Robotika",
+        ects: 6.0,
+        professors: ["doc. dr. sc. Ivan Lorencin"],
+        load: "30P - 30V",
+      },
+      {
+        id: 3,
+        name: "Mobilne aplikacije",
+        ects: 6.0,
+        professors: ["izv. prof. dr. sc. Siniša Sovilj"],
+        load: "30P - 30V",
+      },
+      {
+        id: 4,
+        name: "Raspodijeljeni sustavi",
+        ects: 6.0,
+        professors: ["doc. dr. sc. Nikola Tanković"],
+        load: "30P - 30V",
+      },
+      {
+        id: 5,
+        name: "Izborni predmet",
+        ects: 6.0,
+        professors: ["Različiti profesori"],
+        load: "-",
+      },
+    ],
+    "8. semestar": [
+      {
+        id: 6,
+        name: "Neuronske mreže i duboko učenje",
+        ects: 6.0,
+        professors: ["izv. prof. dr. sc. Goran Oreški"],
+        load: "30P - 30V",
+      },
+      {
+        id: 7,
+        name: "Analiza podataka i obrada informacija",
+        ects: 6.0,
+        professors: ["izv. prof. dr. sc. Siniša Sovilj"],
+        load: "30P - 30V",
+      },
+      {
+        id: 8,
+        name: "Modeliranje i simulacije",
+        ects: 6.0,
+        professors: ["izv. prof. dr. sc. Darko Etinger"],
+        load: "30P - 30V",
+      },
+      {
+        id: 9,
+        name: "Izborni predmet 1",
+        ects: 6.0,
+        professors: ["Različiti profesori"],
+        load: "-",
+      },
+      {
+        id: 10,
+        name: "Izborni predmet 2",
+        ects: 6.0,
+        professors: ["Različiti profesori"],
+        load: "-",
+      },
+    ],
+  },
+  "5. godina diplomskog": {
+    "9. semestar": [
+      {
+        id: 11,
+        name: "Internet stvari",
+        ects: 6.0,
+        professors: ["izv. prof. dr. sc. Siniša Sovilj"],
+        load: "30P - 30V",
+      },
+      {
+        id: 12,
+        name: "Napredni algoritmi i strukture podataka",
+        ects: 6.0,
+        professors: ["prof. dr. sc. Tihomir Orehovački"],
+        load: "30P - 30V",
+      },
+      {
+        id: 13,
+        name: "Razvoj IT rješenja",
+        ects: 6.0,
+        professors: [
+          "izv. prof. dr. sc. Darko Etinger",
+          "izv. prof. dr. sc. Snježana Babić",
+          "izv. prof. dr. sc. Goran Oreški",
+          "doc. dr. sc. Nikola Tanković",
+          "doc. dr. sc. Siniša Miličić",
+          "izv. prof. dr. sc. Siniša Sovilj",
+          "prof. dr. sc. Tihomir Orehovački",
+        ],
+        load: "-",
+      },
+      {
+        id: 14,
+        name: "Izborni predmet 1",
+        ects: 6.0,
+        professors: ["Različiti profesori"],
+        load: "-",
+      },
+      {
+        id: 15,
+        name: "Izborni predmet 2",
+        ects: 6.0,
+        professors: ["Različiti profesori"],
+        load: "-",
+      },
+    ],
+    "10. semestar": [
+      {
+        id: 16,
+        name: "Diplomski rad",
+        ects: 30.0,
+        professors: ["Svi profesori"],
+        load: "-",
+      },
+    ],
+  },
+};
+
+// Izborni predmeti diplomskog studija
+export const graduateElectiveCourses = {
+  "Izborni predmet I": [
+    {
+      name: "Blockchain aplikacije",
+      ects: 6.0,
+      professors: ["doc. dr. sc. Nikola Tanković"],
+      load: "30P - 30V",
+    },
+    {
+      name: "Upravljanje projektima",
+      ects: 6.0,
+      professors: ["izv. prof. dr. sc. Darko Etinger"],
+      load: "30P - 30V",
+    },
+    {
+      name: "Funkcijsko programiranje",
+      ects: 6.0,
+      professors: ["doc. dr. sc. Siniša Miličić"],
+      load: "30P - 30V",
+    },
+    {
+      name: "Stručna praksa (diplomski)",
+      ects: 6.0,
+      professors: [
+        "doc. dr. sc. Nikola Tanković",
+        "doc. dr. sc. Ivan Lorencin",
+      ],
+      load: "-",
+    },
+  ],
+  "Izborni predmet II": [
+    {
+      name: "Sustavi elektroničkog učenja",
+      ects: 6.0,
+      professors: ["izv. prof. dr. sc. Snježana Babić"],
+      load: "30P - 30V",
+    },
+    {
+      name: "Interakcija čovjeka i računala",
+      ects: 6.0,
+      professors: ["prof. dr. sc. Tihomir Orehovački"],
+      load: "30P - 30V",
+    },
+    {
+      name: "Forenzično računovodstvo",
+      ects: 6.0,
+      professors: ["prof. dr. sc. Robert Zenzerović"],
+      load: "30P - 30V",
+    },
+    {
+      name: "Formalni jezici",
+      ects: 6.0,
+      professors: ["doc. dr. sc. Siniša Miličić"],
+      load: "30P - 30V",
+    },
+  ],
+  "Izborni predmet III": [
+    {
+      name: "Blockchain aplikacije",
+      ects: 6.0,
+      professors: ["doc. dr. sc. Nikola Tanković"],
+      load: "30P - 30V",
+    },
+    {
+      name: "Upravljanje projektima",
+      ects: 6.0,
+      professors: ["izv. prof. dr. sc. Darko Etinger"],
+      load: "30P - 30V",
+    },
+    {
+      name: "Funkcijsko programiranje",
+      ects: 6.0,
+      professors: ["doc. dr. sc. Siniša Miličić"],
+      load: "30P - 30V",
+    },
+    {
+      name: "Stručna praksa (diplomski)",
+      ects: 6.0,
+      professors: [
+        "doc. dr. sc. Nikola Tanković",
+        "doc. dr. sc. Ivan Lorencin",
+      ],
+      load: "-",
+    },
+  ],
+};

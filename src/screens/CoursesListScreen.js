@@ -3,13 +3,22 @@ import { StatusBar } from "expo-status-bar";
 import { Text, View, ScrollView } from "react-native";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 import { globalStyles } from "../styles/globalStyles";
-import { undergraduateCourses, electiveCourses } from "../data/courses";
+import {
+  undergraduateCourses,
+  electiveCourses,
+  graduateCourses,
+} from "../data/courses";
 
 export default function CoursesListScreen({ navigation, route }) {
   const { year } = route.params;
 
-  // Dohvaćamo kolegije za odabranu godinu
-  const yearCourses = undergraduateCourses[year];
+  // Dohvaćamo kolegije za odabranu godinu - provjeravamo i preddiplomske i diplomske
+  let yearCourses = undergraduateCourses[year];
+
+  // Ako nije pronađeno u preddiplomskim, probaj diplomske
+  if (!yearCourses) {
+    yearCourses = graduateCourses[year];
+  }
 
   if (!yearCourses) {
     return (

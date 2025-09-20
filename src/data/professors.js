@@ -10,6 +10,9 @@ export const professorsData = [
       "Programiranje",
       "Strukture podataka i algoritmi",
       "Dizajn i programiranje računalnih igara",
+      "Napredni algoritmi i strukture podataka",
+      "Interakcija čovjeka i računala",
+      "Razvoj IT rješenja",
     ],
   },
   {
@@ -19,7 +22,11 @@ export const professorsData = [
     position: "Izvanredna profesorica",
     email: "snjezana.babic@unipu.hr",
     office: "013 (Ulica Alda Negrija 6)",
-    courses: ["Osnove IKT"],
+    courses: [
+      "Osnove IKT",
+      "Sustavi elektroničkog učenja",
+      "Razvoj IT rješenja",
+    ],
   },
   {
     id: 3,
@@ -50,6 +57,10 @@ export const professorsData = [
       "Digitalni marketing",
       "Umjetna inteligencija",
       "Upravljanje poslovnim procesima",
+      "IT Management",
+      "Modeliranje i simulacije",
+      "Upravljanje projektima",
+      "Razvoj IT rješenja",
     ],
   },
   {
@@ -65,6 +76,8 @@ export const professorsData = [
       "Objektno orijentirano programiranje",
       "Geoinformacijski sustavi",
       "Skladišta i rudarenje podataka",
+      "Neuronske mreže i duboko učenje",
+      "Razvoj IT rješenja",
     ],
   },
   {
@@ -74,7 +87,13 @@ export const professorsData = [
     position: "Izvanredni profesor",
     email: "sinisa.sovilj@unipu.hr",
     office: "012 (Ulica Alda Negrija 6)",
-    courses: ["Programiranje na Java virtualnom stroju"],
+    courses: [
+      "Programiranje na Java virtualnom stroju",
+      "Mobilne aplikacije",
+      "Analiza podataka i obrada informacija",
+      "Internet stvari",
+      "Razvoj IT rješenja",
+    ],
   },
   {
     id: 7,
@@ -98,6 +117,8 @@ export const professorsData = [
       "Mrežni sustavi",
       "Umjetna inteligencija",
       "Stručna praksa",
+      "Robotika",
+      "Stručna praksa (diplomski)",
     ],
   },
   {
@@ -116,6 +137,9 @@ export const professorsData = [
       "Statistika",
       "Šifre i kodovi",
       "Praktikum",
+      "Funkcijsko programiranje",
+      "Formalni jezici",
+      "Razvoj IT rješenja",
     ],
   },
   {
@@ -130,6 +154,10 @@ export const professorsData = [
       "Programsko inženjerstvo",
       "Web aplikacije",
       "Stručna praksa",
+      "Raspodijeljeni sustavi",
+      "Blockchain aplikacije",
+      "Stručna praksa (diplomski)",
+      "Razvoj IT rješenja",
     ],
   },
   {
@@ -139,7 +167,7 @@ export const professorsData = [
     position: "Asistent",
     email: "luka.blaskovic@unipu.hr",
     office: "015 (Ulica Alda Negrija 6)",
-    courses: ["*u izradi"],
+    courses: [""],
   },
   {
     id: 12,
@@ -148,7 +176,7 @@ export const professorsData = [
     position: "Asistent",
     email: "robert.sajina@unipu.hr",
     office: "Rovinjska 14, kabinet 10",
-    courses: ["*u izradi"],
+    courses: [""],
   },
   {
     id: 13,
@@ -157,7 +185,7 @@ export const professorsData = [
     position: "Asistent",
     email: "romeo.sajina@unipu.hr",
     office: "014 (Ulica Alda Negrija 6)",
-    courses: ["*u izradi"],
+    courses: [""],
   },
   {
     id: 14,
@@ -166,7 +194,7 @@ export const professorsData = [
     position: "Asistent",
     email: "alesandro.zuzic@unipu.hr",
     office: "Ulica Alda Negrija 6",
-    courses: ["*u izradi"],
+    courses: [""],
   },
   {
     id: 15,
@@ -175,7 +203,7 @@ export const professorsData = [
     position: "Stručna suradnica",
     email: "marijela.milicevic@unipu.hr",
     office: "Ulica Alda Negrija 6",
-    courses: ["*u izradi"],
+    courses: [""],
   },
   {
     id: 16,
@@ -240,6 +268,7 @@ export const professorsData = [
     courses: [
       "Računovodstvo u virtualnom okruženju",
       "Računovodstveni informacijski sustavi",
+      "Forenzično računovodstvo",
     ],
   },
   {
