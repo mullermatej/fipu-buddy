@@ -11,6 +11,7 @@ import ProfessorsScreen from "./src/screens/ProfessorsScreen";
 import ExamScheduleScreen from "./src/screens/ExamScheduleScreen";
 import TemplateDocumentsScreen from "./src/screens/TemplateDocumentsScreen";
 import StudentProfileScreen from "./src/screens/StudentProfileScreen";
+import SmartLearningScreen from "./src/screens/SmartLearningScreen";
 
 const Stack = createStackNavigator();
 
@@ -86,6 +87,11 @@ export default function App() {
           name="ExamSchedule"
           component={ExamScheduleScreen}
           options={getHeaderOptions("Ispitni rokovi")}
+        />
+        <Stack.Screen
+          name="SmartLearning"
+          component={SmartLearningScreen}
+          options={getHeaderOptions("Pametno učenje")}
         />
         <Stack.Screen
           name="TemplateDocuments"

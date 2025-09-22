@@ -94,6 +94,19 @@ export default function HomeScreen({ navigation }) {
 
             <TouchableOpacity
               style={globalStyles.featureCard}
+              onPress={() => navigation.navigate("SmartLearning")}
+            >
+              <Text style={globalStyles.featureIcon}>🧠</Text>
+              <View style={globalStyles.featureContent}>
+                <Text style={globalStyles.featureTitle}>Pametno učenje</Text>
+                <Text style={globalStyles.featureDescription}>
+                  Kalendar i pregled aktivnih rokova za organizaciju učenja
+                </Text>
+              </View>
+            </TouchableOpacity>
+
+            <TouchableOpacity
+              style={globalStyles.featureCard}
               onPress={() => navigation.navigate("TemplateDocuments")}
             >
               <Text style={globalStyles.featureIcon}>📄</Text>

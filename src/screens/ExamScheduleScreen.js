@@ -17,6 +17,7 @@ export default function ExamScheduleScreen({ navigation }) {
   const [showSuggestions, setShowSuggestions] = useState(false);
   const [allCourses, setAllCourses] = useState([]);
   const [courseSelected, setCourseSelected] = useState(false);
+  const [isInputFocused, setIsInputFocused] = useState(false);
 
   // Prilikom učitavanja komponente, kreiraj popis svih kolegija
   useEffect(() => {
@@ -64,6 +65,7 @@ export default function ExamScheduleScreen({ navigation }) {
 
   // Funkcija za fokusiranje input polja
   const handleInputFocus = () => {
+    setIsInputFocused(true);
     setCourseSelected(false); // Reset kad se fokusira input
 
     if (searchText.length > 0) {
@@ -78,12 +80,24 @@ export default function ExamScheduleScreen({ navigation }) {
     setShowSuggestions(true);
   };
 
+  // Funkcija za gubljenje fokusa input polja
+  const handleInputBlur = () => {
+    setIsInputFocused(false);
+    // Dodaj kratki delay prije zatvaranja prijedloga da omogućimo klik na njih
+    setTimeout(() => {
+      if (!courseSelected) {
+        setShowSuggestions(false);
+      }
+    }, 150);
+  };
+
   // Odaberi kolegij iz prijedloga
   const selectCourse = (courseName) => {
     setSearchText(courseName);
     setShowSuggestions(false);
     setFilteredCourses([]);
     setCourseSelected(true); // Označava da je kolegij odabran iz liste
+    setIsInputFocused(false); // Ukloni fokus nakon odabira
   };
 
   // Zatvori prijedloge
@@ -131,28 +145,33 @@ export default function ExamScheduleScreen({ navigation }) {
                 value={searchText}
                 onChangeText={handleSearchChange}
                 onFocus={handleInputFocus}
+                onBlur={handleInputBlur}
               />
 
-              {/* Prikaz prijedloga */}
-              {showSuggestions && filteredCourses.length > 0 && (
-                <View style={globalStyles.suggestionsContainer}>
-                  <ScrollView
-                    style={globalStyles.suggestionsList}
-                    nestedScrollEnabled={true}
-                    keyboardShouldPersistTaps="handled"
-                  >
-                    {filteredCourses.map((item, index) => (
-                      <TouchableOpacity
-                        key={index}
-                        style={globalStyles.suggestionItem}
-                        onPress={() => selectCourse(item)}
-                      >
-                        <Text style={globalStyles.suggestionText}>{item}</Text>
-                      </TouchableOpacity>
-                    ))}
-                  </ScrollView>
-                </View>
-              )}
+              {/* Prikaz prijedloga - samo kada je input fokusiran */}
+              {showSuggestions &&
+                isInputFocused &&
+                filteredCourses.length > 0 && (
+                  <View style={globalStyles.suggestionsContainer}>
+                    <ScrollView
+                      style={globalStyles.suggestionsList}
+                      nestedScrollEnabled={true}
+                      keyboardShouldPersistTaps="handled"
+                    >
+                      {filteredCourses.map((item, index) => (
+                        <TouchableOpacity
+                          key={index}
+                          style={globalStyles.suggestionItem}
+                          onPress={() => selectCourse(item)}
+                        >
+                          <Text style={globalStyles.suggestionText}>
+                            {item}
+                          </Text>
+                        </TouchableOpacity>
+                      ))}
+                    </ScrollView>
+                  </View>
+                )}
 
               {/* Dugme za dodavanje roka - pokaži samo kada je kolegij kliknut iz liste */}
               {searchText.length > 0 && courseSelected && (
