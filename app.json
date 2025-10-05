@@ -11,12 +11,14 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
-    "assetBundlePatterns": ["**/*"],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "runtimeVersion": {
       "policy": "sdkVersion"
     },
     "updates": {
-      "url": "https://u.expo.dev/00000000-0000-0000-0000-000000000000"
+      "url": "https://u.expo.dev/b71d80f3-6974-48e6-a1b6-d7e47f5975dd"
     },
     "ios": {
       "supportsTablet": true
@@ -29,6 +31,12 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "b71d80f3-6974-48e6-a1b6-d7e47f5975dd"
+      }
+    },
+    "owner": "mmuller14"
   }
 }
